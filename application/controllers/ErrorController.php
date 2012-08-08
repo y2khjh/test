@@ -1,5 +1,5 @@
 <?php
-require_once 'Zend/Controller/Action';
+require_once 'Zend/Controller/Action.php';
 
 class ErrorController extends Zend_Controller_Action
 {
