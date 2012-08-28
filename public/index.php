@@ -6,20 +6,20 @@ defined('APPLICATION_ENV')
     || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));
 
 require_once 'Zend/Controller/Front.php';
-require_once 'Zend/Controller/Router/Rewrite.php';
+#require_once 'Zend/Controller/Router/Rewrite.php';
 
-$router = new Zend_Controller_Router_Rewrite();
+#$router = new Zend_Controller_Router_Rewrite();
 
 $front = Zend_Controller_Front::getInstance();
 #$front->setParam('noViewRenderer', true);
 
 $front->setControllerDirectory(array(
-    'client' => APPLICATION_PATH . '/modules/client/controllers',
-    'admin' => APPLICATION_PATH . '/modules/admin/controllers',
+    'default' => APPLICATION_PATH . '/modules/default/controllers',
+    'user' => APPLICATION_PATH . '/modules/user/controllers',
 ));
-$front->setControllerDirectory(APPLICATION_PATH .'/modules/webservice/controllers', 'webservice');
-$front->setControllerDirectory(APPLICATION_PATH . '/controllers', 'default');
+#$front->setControllerDirectory(APPLICATION_PATH .'/modules/webservice/controllers', 'webservice');
 
-$front->setRouter($router);
+#$front->setRouter($router);
+#$front->setParam('useDefaultControllerAlways', true);
 $response = $front->dispatch();
 #Zend_Controller_Front::run(APPLICATION_PATH . '/controllers');
