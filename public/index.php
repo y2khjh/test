@@ -28,6 +28,6 @@ $front->setControllerDirectory(array(
 
 #$front->setRouter($router);
 #$front->setParam('useDefaultControllerAlways', true);
+Zend_Layout::startMvc($config->resources->layout);
 #Zend_Controller_Front::run(APPLICATION_PATH . '/controllers');
 $response = $front->dispatch();
-Zend_Layout::startMvc($config->resources->layout);
