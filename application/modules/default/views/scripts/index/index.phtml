@@ -1,1 +1,10 @@
-hello!
+<?php $this->headTitle()->append('Home') ?>
+<p><?php echo $this->escape($this->title) ?></p>
+<p><?php echo $this->escape($this->description) ?></p>
+<p><?php echo $this->escape($this->surname) ?></p>
+<p><?php echo $this->escape($this->givenname) ?></p>
+<p><?php echo $this->escape(var_export($this->cd)) ?></p>
+<p><?php echo $this->escape(var_export($this->me)) ?></p>
+<p><?php //echo $this->escape($this->baseUrl) ?></p>
+<p><?php //echo $this->escape(var_export($this->params)) ?></p>
+<p><?php //echo htmlspecialchars_decode(Zend_Debug::dump($this->baseUrl, 'Test', false)) ?></p>

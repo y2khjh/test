@@ -1,3 +1,5 @@
+php_value session.auto_start 0
+
 RewriteEngine On
 RewriteRule !.(js|css|ico|gif|jpg|png)$ index.php
 RewriteCond %{REQUEST_FILENAME} -s [OR]

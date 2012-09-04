@@ -1,7 +1,6 @@
 <?php
-require_once 'Zend/Controller/Action.php';
 
-class ErrorController extends Zend_Controller_Action
+class ErrorController extends AppController
 {
     public function errorAction()
     {

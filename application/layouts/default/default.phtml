@@ -1,9 +1,11 @@
-<?php //echo $this->docType('XHTML1_STRICT') ?>
+<?php echo $this->doctype('XHTML1_STRICT') ?>
 <html>
   <head>
-    <?php //echo $this->headTitle() ?>
-    <?php //echo $this->headScript() ?>
-    <?php //echo $this->headStylesheet() ?>
+    <?php echo $this->headTitle('Test')->setSeparator(' :: ') ?>
+    <?php echo $this->headMeta()->appendHttpEquiv('Content-Type', 'text/html; charset=UTF-8') ?>
+    <?php echo $this->headMeta()->appendHttpEquiv('Content-Language', 'zh-CN') ?>
+    <?php echo $this->headLink()->prependStylesheet('/css/default.css') ?>
+    <?php echo $this->headScript()->prependFile('/js/default.js') ?>
   </head>
   <body>
     <?php echo $this->layout()->content ?>
